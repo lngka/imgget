@@ -1,1 +1,1 @@
-# imgget
+# Just another img search API
