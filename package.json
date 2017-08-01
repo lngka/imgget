@@ -1,7 +1,10 @@
 {
-  "name": "fcc-learn-npm-package-json",
+  "name": "imgget",
   "dependencies": {
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "bl": "^1.2.1",
+    "https": "^1.0.0",
+    "mongodb": "^2.2.30"
   },
   "main": "server.js",
   "scripts": {

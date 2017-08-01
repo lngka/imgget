@@ -2,7 +2,7 @@
 <html>
 
    <head>
-      <title>IMG Get API</title>
+      <title>IMGGet API</title>
       <link rel="shortcut icon" href="https://cdn.glitch.com/5a174075-5b55-4fb6-9ade-a35feeed6039%2Ffavicon.ico?1501315908184" type="image/x-icon"/>
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
       <link href="/public/style.css" rel="stylesheet" type="text/css">
@@ -10,15 +10,36 @@
 
    <body>
       <div class="container">
-         <h1>Images Get API</h1>
+         <h1>IMGGET Service</h1>
         <hr>
         <p>
           <b><u>Usage:</u></b>
+          <div>
+            To search for images: GET https://imgget.glitch.me/?searchTerm=&lt;YOUR_TERM&gt;&offset=&lt;OFFSET&gt;
+            <br>
+            Results are indexed from 1 to n, with n being the total number of results.
+            <br>
+            Results are shown in batch of 10. That is, if offet=1, server will response with result number 1 to 10.  
+            <br>
+            To view the latest 10 searches: GET <link>https://imgget.glitch.me/history 
+          </div>
         </p>
         <hr>
         <p>
-          <b><u>Example:</u></b>
+          <b><u>Note:</u></b>
+          One can only make 100 request per day.
         </p>
+        <hr>
+        <p>
+          <b><u>Demo:</u></b>
+        </p>
+        <form action="/" method="get">
+          Search term: <br>
+          <input type="text" name="searchTerm" placeholder="lol cat"><br>
+          Offset: <br>
+          <input type="number" name="offset" placeholder="1"><br>
+          <input type="submit" value="Get">
+        </form>
       </div>
    </body>
 
