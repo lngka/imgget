@@ -14,10 +14,20 @@
         <hr>
         <p>
           <b><u>Usage:</u></b>
+          <div>
+            To search for images: GET https://imgget.glitch.me/?searchTerm=&lt;YOUR_TERM&gt;&offset=&lt;OFFSET&gt;
+            <br>
+            Results are indexed from 1 to n, with n being the total number of results.
+            <br>
+            Results are shown in batch of 10. That is, if offet=1, server will response with result number 1 to 10.  
+            <br>
+            To view the latest 10 searches: GET <link>https://imgget.glitch.me/history 
+          </div>
         </p>
         <hr>
         <p>
-          <b><u>Example:</u></b>
+          <b><u>Note:</u></b>
+          One can only make 100 request per day.
         </p>
         <hr>
         <p>
@@ -27,7 +37,7 @@
           Search term: <br>
           <input type="text" name="searchTerm" placeholder="lol cat"><br>
           Offset: <br>
-          <input type="number" name="offset" placeholder="How many?"><br>
+          <input type="number" name="offset" placeholder="1"><br>
           <input type="submit" value="Get">
         </form>
       </div>
